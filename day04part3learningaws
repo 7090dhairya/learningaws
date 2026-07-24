@@ -1,0 +1,14 @@
+now i am able to answer these in a proper structured manner which was not possible until yesterday
+
+What is a VPC?
+What is a CIDR block?
+Why do we need subnets?
+What makes a subnet public?
+What makes a subnet private?
+Why do we need an Internet Gateway?
+Why can't private subnets use the Internet Gateway directly?
+Why is a NAT Gateway placed in a public subnet?
+What is the difference between Public IP and Private IP?
+What is the purpose of a Route Table?
+Difference between Security Groups and Network ACLs.
+Explain the complete packet flow from your laptop to an EC2 instance.
