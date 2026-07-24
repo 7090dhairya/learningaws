@@ -1,0 +1,37 @@
+Route Tables (Deep Dive)
+
+Learned:
+
+Local Route
+10.0.0.0/16 → Local
+
+Why does every Route Table contain this route?
+
+Internet Route
+0.0.0.0/0 → Internet Gateway
+
+What does 0.0.0.0/0 mean?
+
+NAT Route
+0.0.0.0/0 → NAT Gateway
+
+Why is this route used only for private subnets?
+
+Understood:
+
+Route priority
+Longest Prefix Match
+Route Table Association
+5. Internet Gateway (Deep Dive)
+
+Learned:
+
+What is an Internet Gateway?
+Why is it highly available?
+Why only one Internet Gateway per VPC?
+How does inbound traffic work?
+How does outbound traffic work?
+
+Most importantly:
+
+Why does attaching an Internet Gateway NOT automatically make your EC2 reachable?
