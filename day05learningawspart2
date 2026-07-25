@@ -1,0 +1,10 @@
+3. Types of Load Balancers
+Application Load Balancer (ALB) – Layer 7 (HTTP/HTTPS)
+Network Load Balancer (NLB) – Layer 4 (TCP/UDP)
+Gateway Load Balancer (GWLB) – Security appliances
+Know when to use each one
+4. Target Groups
+What is a Target Group?
+Why ELB doesn't send traffic directly to EC2
+Registering EC2 instances
+Health checks
