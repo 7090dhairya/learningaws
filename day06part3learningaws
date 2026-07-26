@@ -1,0 +1,22 @@
+5. Scaling Policies
+
+Learn the different types:
+
+Target Tracking Scaling
+Simple Scaling
+Step Scaling
+Scheduled Scaling
+
+Understand when each is used.
+
+6. CloudWatch Metrics
+
+Learn how ASG knows when to scale.
+
+Focus on:
+
+CPU Utilization
+Network In
+Network Out
+Request Count
+Custom Metrics (basic idea)
