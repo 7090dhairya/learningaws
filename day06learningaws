@@ -1,0 +1,18 @@
+1. Why do we need Auto Scaling?
+
+Understood the problems:
+
+What happens if one EC2 crashes?
+What if 10,000 users visit your website?
+What if traffic suddenly drops?
+
+Learned why manually launching EC2 instances is not practical.
+
+2. What is an Auto Scaling Group?
+
+Learned :
+
+Definition
+How it automatically launches new EC2 instances
+How it terminates unnecessary instances
+How it maintains High Availability
