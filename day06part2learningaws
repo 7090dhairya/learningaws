@@ -1,0 +1,35 @@
+3. Desired Capacity
+
+Understood:
+
+Desired Capacity
+Minimum Capacity
+Maximum Capacity
+
+Example:
+
+Minimum = 2
+Desired = 3
+Maximum = 6
+
+got some important conecepts for the interview
+
+What happens if one instance fails?
+What happens if traffic increases?
+
+
+
+4. Launch Templates
+
+Learned:
+
+What is a Launch Template?
+Why ASG needs it
+What information it stores:
+AMI
+Instance Type
+Security Group
+Key Pair
+User Data
+Storage
+IAM Role
