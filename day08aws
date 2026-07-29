@@ -1,0 +1,136 @@
+After completing Auto Scaling Groups (ASG) hands-on, you should now be able to confidently answer both interview and AWS SAA questions like these.
+
+Basic Questions
+1. What is an Auto Scaling Group?
+
+An Auto Scaling Group is an AWS service that automatically launches, terminates, and replaces EC2 instances to maintain the desired number of healthy instances.
+
+2. Why do we need Auto Scaling?
+High availability
+Fault tolerance
+Cost optimization
+Automatic scaling based on demand
+3. What are the three capacities in an ASG?
+Minimum Capacity
+Desired Capacity
+Maximum Capacity
+
+Example:
+
+Minimum = 2
+Desired = 4
+Maximum = 8
+4. What happens if an EC2 instance crashes?
+
+The ASG detects the unhealthy instance through health checks, terminates it, and launches a replacement automatically.
+
+5. What happens if you manually terminate an EC2 instance inside an ASG?
+
+The ASG notices that the number of running instances is below the desired capacity and launches a new instance automatically.
+
+You actually observed this behavior in your lab.
+
+Launch Template Questions
+6. What is a Launch Template?
+
+It stores the configuration for launching EC2 instances, such as:
+
+AMI
+Instance type
+Security Group
+Key Pair
+User Data
+IAM Role
+7. Why does an ASG need a Launch Template?
+
+Because the ASG needs a blueprint to know how to create replacement instances.
+
+Health Check Questions
+8. What health checks does an ASG use?
+EC2 Status Checks
+Elastic Load Balancer (ALB/NLB) Health Checks
+9. Difference between EC2 health checks and ALB health checks?
+
+EC2 Health Check
+
+Checks whether the virtual machine itself is healthy.
+
+ALB Health Check
+
+Checks whether the application running on the instance is responding correctly.
+Scaling Questions
+10. What is Scale Out?
+
+Adding more EC2 instances when demand increases.
+
+11. What is Scale In?
+
+Removing EC2 instances when demand decreases.
+
+12. Name the scaling policies.
+Target Tracking Scaling
+Step Scaling
+Simple Scaling
+Scheduled Scaling
+Predictive Scaling
+Load Balancer Integration
+13. Why do we use an ALB with an ASG?
+
+The ALB distributes incoming traffic across multiple healthy EC2 instances, while the ASG maintains the correct number of healthy instances.
+
+14. What is a Target Group?
+
+A Target Group is a collection of backend resources (usually EC2 instances) that receive traffic from a Load Balancer.
+
+15. What happens when a target becomes unhealthy?
+
+The Load Balancer stops sending traffic to it, and if the ASG uses ELB health checks, the ASG replaces the instance.
+
+User Data
+16. What is User Data?
+
+A startup script that runs automatically the first time an EC2 instance boots.
+
+17. Why did we use User Data?
+
+To automatically:
+
+Install Apache
+Create the HTML page
+Configure the web server
+
+This ensured every replacement instance was configured without manual work.
+
+Availability Questions
+18. Why should an ASG span multiple Availability Zones?
+
+If one Availability Zone fails, instances in the other zone continue serving traffic, improving availability.
+
+19. Can an ASG exist without a Load Balancer?
+
+Yes. It can maintain the desired number of instances without a Load Balancer, but clients would need another way to reach those instances.
+
+20. Can an ASG replace unhealthy instances automatically?
+
+Yes.
+
+That is one of its core features.
+
+Scenario-Based Questions
+21. Your website receives 10× more traffic. What happens?
+
+If scaling policies are configured, the ASG launches additional EC2 instances, and the Load Balancer distributes traffic among them.
+
+22. One EC2 instance stops responding. What happens?
+The Load Balancer health check fails.
+The instance is marked unhealthy.
+The ASG terminates it.
+A new instance is launched.
+The new instance registers with the Target Group after becoming healthy.
+23. Why is Desired Capacity important?
+
+It defines how many instances the ASG tries to keep running at all times.
+
+24. Can you update software on every future EC2 instance automatically?
+
+Yes. Update the User Data or create a new version of the Launch Template, then have the ASG use that version for new instances.
