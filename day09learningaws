@@ -1,0 +1,15 @@
+Why S3 is called object storage.
+Can EC2 directly access a private bucket?
+Difference between Bucket Policy and IAM Policy.
+Difference between IAM Role and Bucket Policy.
+When should I use a presigned URL?
+What is Versioning?
+Can I recover a deleted object?
+Which storage class should I use?
+Why Lifecycle Rules?
+Difference between SSE-S3 and SSE-KMS.
+What is Cross Region Replication?
+Can S3 host a website?
+Is S3 a database?
+Maximum object size in S3.
+Is S3 regional or global?
