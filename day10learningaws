@@ -1,0 +1,11 @@
+🛠 Final Hands-on Lab
+
+Build one bucket that includes:
+
+Private bucket
+Versioning enabled
+Encryption enabled
+Lifecycle rule
+Bucket policy
+Generate a presigned URL
+(Optional) Static website hosting on a separate bucket
