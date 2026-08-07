@@ -1,0 +1,4 @@
+Why are Aurora Replicas faster than RDS Read Replicas?
+What causes replication lag in traditional RDS?
+Explain Aurora's replication architecture.
+What happens when the Writer Instance fails?
